@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loopy AI - Intelligent Workspace Automation Loop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bg-glow glow-top-right"></div>
+  <div class="bg-glow glow-bottom-left"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      Loopy AI <span class="logo-dot"></span>
+    </div>
+    <div class="tech-tags" style="margin-top: 0;">
+      <span class="tech-tag" style="border-color: rgba(168, 85, 247, 0.4); color: #c084fc;">v1.2.0 Active</span>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header>
+    <div class="badge">
+      <span>✨ Self-Improving AI Analytics Loop</span>
+    </div>
+    <h1>업무의 흐름을 지능적으로 연결하다<br><span>Loopy AI Architecture</span></h1>
+    <p class="hero-subtitle">
+      구글 캘린더, Gmail, 메신저에서 발생하는 파편화된 워크스페이스 비정형 데이터를 실시간으로 취합하고 정규화하여, 지능형 일일 리포팅과 비즈니스 데이터 자산화를 달성합니다.
+    </p>
+
+    <!-- Key Metrics / Stats -->
+    <div class="stats-container">
+      <div class="stat-card glass-card">
+        <div class="stat-val">100%</div>
+        <div class="stat-lbl">데이터 통합 자동화</div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-val">0 min</div>
+        <div class="stat-lbl">수동 리포트 작성 시간</div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-val">SQLite</div>
+        <div class="stat-lbl">관계형 DB 자산화</div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-val">Gemini</div>
+        <div class="stat-lbl">AI 정밀 구조화 분석</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive System Schema Section -->
+  <section id="schema">
+    <h2 class="section-title">시스템 동작 스키마 (System Schema)</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+      아래 스키마의 각 노드를 클릭하면 해당 단계의 상세 데이터 흐름 및 기능을 확인할 수 있습니다.
+    </p>
+
+    <div class="schema-container">
+      <!-- Left: Interactive SVG Schema Diagram -->
+      <div class="schema-visual">
+        <svg class="schema-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Flow Line Backings -->
+          <path id="line1" d="M100 100 H300" stroke="#251b40" stroke-width="2"/>
+          <path id="line2" d="M300 100 V300" stroke="#251b40" stroke-width="2"/>
+          <path id="line3" d="M300 300 H100" stroke="#251b40" stroke-width="2"/>
+          <path id="line4" d="M100 300 V100" stroke="#251b40" stroke-width="2"/>
+
+          <!-- Animated Flowing Dash Lines -->
+          <path id="flow1" d="M100 100 H300" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" stroke-linecap="round" class="flow-line"/>
+          <path id="flow2" d="M300 100 V300" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" stroke-linecap="round" class="flow-line"/>
+          <path id="flow3" d="M300 300 H100" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" stroke-linecap="round" class="flow-line"/>
+          <path id="flow4" d="M100 300 V100" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" stroke-linecap="round" class="flow-line"/>
+
+          <!-- Center Logo Concept -->
+          <circle cx="200" cy="200" r="40" fill="url(#center-glow)" stroke="rgba(168, 85, 247, 0.3)" stroke-width="1"/>
+          <text x="200" y="205" fill="#f3f4f6" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">LOOPY</text>
+
+          <!-- Node 1: Fetcher -->
+          <g id="node-fetcher" class="node active" onclick="selectNode('fetcher')">
+            <rect x="50" y="60" width="100" height="80" rx="10" fill="#161026" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="100" y="95" fill="#f3f4f6" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">1. Data Fetcher</text>
+            <text x="100" y="115" fill="#9ca3af" font-family="Outfit" font-size="10" text-anchor="middle">Email, Cal, Chat</text>
+          </g>
+
+          <!-- Node 2: Analyzer -->
+          <g id="node-analyzer" class="node" onclick="selectNode('analyzer')">
+            <rect x="250" y="60" width="100" height="80" rx="10" fill="#161026" stroke="#3b82f6" stroke-width="1.5"/>
+            <text x="300" y="95" fill="#f3f4f6" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">2. AI Analyzer</text>
+            <text x="300" y="115" fill="#9ca3af" font-family="Outfit" font-size="10" text-anchor="middle">Gemini LLM Parser</text>
+          </g>
+
+          <!-- Node 3: Database -->
+          <g id="node-db" class="node" onclick="selectNode('db')">
+            <rect x="250" y="260" width="100" height="80" rx="10" fill="#161026" stroke="#10b981" stroke-width="1.5"/>
+            <text x="300" y="295" fill="#f3f4f6" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">3. DB Engine</text>
+            <text x="300" y="315" fill="#9ca3af" font-family="Outfit" font-size="10" text-anchor="middle">SQLite DB Save</text>
+          </g>
+
+          <!-- Node 4: Email Sender -->
+          <g id="node-email" class="node" onclick="selectNode('email')">
+            <rect x="50" y="260" width="100" height="80" rx="10" fill="#161026" stroke="#f59e0b" stroke-width="1.5"/>
+            <text x="100" y="295" fill="#f3f4f6" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">4. Report Sender</text>
+            <text x="100" y="315" fill="#9ca3af" font-family="Outfit" font-size="10" text-anchor="middle">SMTP Dispatcher</text>
+          </g>
+
+          <!-- Definitions -->
+          <defs>
+            <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(168, 85, 247, 0.4)"/>
+              <stop offset="100%" stop-color="rgba(11, 7, 22, 0)"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Right: Detailed Node Info Panel -->
+      <div class="schema-detail-panel glass-card" id="detail-panel">
+        <span class="step-indicator" id="detail-step">STEP 1</span>
+        <h3 id="detail-title">데이터 수집 파이프라인 (Data Fetcher)</h3>
+        <p id="detail-desc">
+          구글 캘린더 API를 통해 당일 일정을 파싱하고, SMTP/IMAP 프로토콜로 이메일을 수집하며, 로컬 윈도우 환경에 최적화된 GUI 자동화 트리거를 활용해 카카오톡 대화 로그를 실시간 비정형 텍스트 상태로 수집해 옵니다.
+        </p>
+        
+        <div class="code-preview" id="detail-code">
+<span class="comment"># src/email_fetcher.py</span>
+<span class="keyword">def</span> <span class="function">fetch_emails</span>(user, password, target_date):
+    mail = imaplib.IMAP4_SSL(<span class="string">"imap.gmail.com"</span>)
+    mail.login(user, password)
+    <span class="comment"># ... 날짜 검색 및 이메일 텍스트 구조화 파싱 진행</span>
+    <span class="keyword">return</span> parsed_emails</div>
+
+        <div class="tech-tags" id="detail-tags">
+          <span class="tech-tag">IMAP/SMTP</span>
+          <span class="tech-tag">Google API</span>
+          <span class="tech-tag">PyAutoGUI/Win32API</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Features Section -->
+  <section id="features">
+    <h2 class="section-title">주요 모듈 및 기능 특징</h2>
+
+    <div class="features-grid">
+      <!-- Fetcher Card -->
+      <div class="glass-card">
+        <div class="feature-header">
+          <div class="feature-icon-wrapper">🔌</div>
+          <h3>다중 채널 데이터 수집 (Fetcher)</h3>
+        </div>
+        <p class="feature-desc">
+          이메일 수신함, 구글 캘린더 일정 목록, 로컬 메신저 클라이언트를 주기적으로 모니터링하여 원시 데이터를 정규 패턴 텍스트 형태로 안전하게 추출합니다.
+        </p>
+        <div class="code-preview">
+<span class="keyword">from</span> src.chat_reader <span class="keyword">import</span> read_and_archive_chat_logs
+<span class="comment"># 메신저 창을 검색하고 대화 로그를 로컬 버퍼로 백업</span>
+chat_logs = read_and_archive_chat_logs()</div>
+      </div>
+
+      <!-- AI Analyzer Card -->
+      <div class="glass-card">
+        <div class="feature-header">
+          <div class="feature-icon-wrapper">🧠</div>
+          <h3>AI 기반 업무 통합 분석 (Analyzer)</h3>
+        </div>
+        <p class="feature-desc">
+          Gemini AI의 고성능 자연어 이해 성능을 이용하여, 하루 동안의 다차원 업무 데이터를 유기적으로 맥락 분석하고 가독성 높은 리포트를 생성합니다.
+        </p>
+        <div class="code-preview">
+<span class="keyword"># Structured JSON Output 프롬프트 결합</span>
+report_text = analyze_all_data(
+    emails, chat_logs, calendar_events, previous_report
+)</div>
+      </div>
+
+      <!-- DB Engine Card -->
+      <div class="glass-card">
+        <div class="feature-header">
+          <div class="feature-icon-wrapper">💾</div>
+          <h3>구조화 DB 영구 적재 (DB Engine)</h3>
+        </div>
+        <p class="feature-desc">
+          AI 분석 결과물에서 정형 JSON 블록 데이터를 자동 분리 및 파싱하여, 추후 대시보드나 검색 시스템에 활용할 수 있도록 관계형 DB(SQLite)에 저장합니다.
+        </p>
+        <div class="code-preview">
+<span class="comment"># DB 모델 스키마에 자동 맵핑 저장</span>
+save_all_projects_to_db(report_date_str, json_data)</div>
+      </div>
+
+      <!-- Sender Card -->
+      <div class="glass-card">
+        <div class="feature-header">
+          <div class="feature-icon-wrapper">✉️</div>
+          <h3>일일 메일 자동 배포 (Sender)</h3>
+        </div>
+        <p class="feature-desc">
+          분석이 완료되는 즉시, 마크다운으로 깔끔하게 포맷팅된 리포트 파일을 이메일 템플릿으로 래핑하여 지정된 수신인들에게 즉시 SMTP 전송합니다.
+        </p>
+        <div class="code-preview">
+<span class="comment"># 로컬 저장된 리포트 경로를 바탕으로 자동 이메일 전송</span>
+send_report_email(saved_path)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Loopy AI. Built for Premium Workspace Automation.</p>
+  </footer>
+
+  <!-- Interactivity Script -->
+  <script>
+    const nodeData = {
+      fetcher: {
+        step: 'STEP 1',
+        title: '데이터 수집 파이프라인 (Data Fetcher)',
+        desc: '구글 캘린더 API를 통해 당일 일정을 파싱하고, SMTP/IMAP 프로토콜로 이메일을 수집하며, 로컬 윈도우 환경에 최적화된 GUI 자동화 트리거를 활용해 카카오톡 대화 로그를 실시간 비정형 텍스트 상태로 수집해 옵니다.',
+        code: `<span class="comment"># src/email_fetcher.py</span>\n<span class="keyword">def</span> <span class="function">fetch_emails</span>(user, password, target_date):\n    mail = imaplib.IMAP4_SSL(<span class="string">"imap.gmail.com"</span>)\n    mail.login(user, password)\n    <span class="comment"># ... 날짜 검색 및 이메일 텍스트 구조화 파싱 진행</span>\n    <span class="keyword">return</span> parsed_emails`,
+        tags: ['IMAP/SMTP', 'Google API', 'PyAutoGUI/Win32API'],
+        flowIndex: 1
+      },
+      analyzer: {
+        step: 'STEP 2',
+        title: 'AI 맥락 분석 엔진 (AI Analyzer)',
+        desc: '수집된 텍스트 로그들을 시간축 및 업무 중요도 기준으로 취합합니다. Gemini API를 연동하여 중요 업무 요약, 이슈 트래킹, 액션 아이템 할당 등 유의미한 비즈니스 통찰로 변환합니다.',
+        code: `<span class="comment"># src/ai_analyzer.py</span>\n<span class="keyword">def</span> <span class="function">analyze_all_data</span>(emails, chats, calendar, prev):\n    prompt = compose_structured_prompt(emails, chats, calendar, prev)\n    response = model.generate_content(prompt)\n    <span class="keyword">return</span> response.text`,
+        tags: ['Gemini Pro API', 'Prompt Engineering', 'Structured JSON Output'],
+        flowIndex: 2
+      },
+      db: {
+        step: 'STEP 3',
+        title: '구조화 데이터베이스 엔진 (DB Engine)',
+        desc: '생성된 리포트 본문 속에 포함된 정형화 JSON 업무 데이터를 정규식으로 안전하게 분리해 낸 후, SQLite RDB 스키마 구조에 마이그레이션 및 인덱싱 처리하여 보관합니다.',
+        code: `<span class="comment"># src/db_manager.py</span>\n<span class="keyword">def</span> <span class="function">save_all_projects_to_db</span>(date_str, json_data):\n    conn = sqlite3.connect(<span class="string">"loopy_data.db"</span>)\n    cursor = conn.cursor()\n    <span class="comment"># RDB INSERT & COMMIT 트랜잭션 안전하게 실행</span>`,
+        tags: ['SQLite', 'Database Indexing', 'JSON Schema Parsing'],
+        flowIndex: 3
+      },
+      email: {
+        step: 'STEP 4',
+        title: '리포트 배포 및 순환 완료 (Report Sender)',
+        desc: '마크다운 포맷의 미려한 일일 업무 보고서를 메일 본문 형식(HTML/MIME)으로 인코딩하여 매일 아침 수신자에게 전송하고, 로컬 보고서 히스토리 디렉토리에 마이그레이션 백업을 완료합니다.',
+        code: `<span class="comment"># src/email_sender.py</span>\n<span class="keyword">def</span> <span class="function">send_report_email</span>(saved_path):\n    msg = MIMEMultipart()\n    msg[<span class="string">"Subject"</span>] = f<span class="string">"Loopy AI 일일 업무 보고서"</span>\n    <span class="comment"># SMTP 서버 핸들링 및 발송 완료</span>`,
+        tags: ['SMTP Protocol', 'MIME Multipart', 'Markdown-to-HTML'],
+        flowIndex: 4
+      }
+    };
+
+    function selectNode(nodeId) {
+      // Deactivate all nodes and flows
+      document.querySelectorAll('.node').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.flow-line').forEach(el => el.classList.remove('flow-line-active'));
+
+      // Activate clicked node
+      const clickedNode = document.getElementById(`node-${nodeId}`);
+      if (clickedNode) clickedNode.classList.add('active');
+
+      // Update Detail Panel Content
+      const data = nodeData[nodeId];
+      if (data) {
+        document.getElementById('detail-step').innerText = data.step;
+        document.getElementById('detail-title').innerText = data.title;
+        document.getElementById('detail-desc').innerText = data.desc;
+        document.getElementById('detail-code').innerHTML = data.code;
+
+        // Update tag list
+        const tagsContainer = document.getElementById('detail-tags');
+        tagsContainer.innerHTML = '';
+        data.tags.forEach(tag => {
+          const tagSpan = document.createElement('span');
+          tagSpan.className = 'tech-tag';
+          tagSpan.innerText = tag;
+          tagsContainer.appendChild(tagSpan);
+        });
+
+        // Activate corresponding flows
+        const flowLine = document.getElementById(`flow${data.flowIndex}`);
+        if (flowLine) flowLine.classList.add('flow-line-active');
+      }
+    }
+  </script>
+</body>
+</html>

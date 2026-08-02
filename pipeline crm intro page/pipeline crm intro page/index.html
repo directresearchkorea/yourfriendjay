@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline CRM Dashboard — 시스템 소개</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #08090f;
+            --card-bg: rgba(18, 20, 32, 0.65);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.3);
+            --secondary: #8b5cf6;
+            --secondary-glow: rgba(139, 92, 246, 0.3);
+            --accent: #10b981;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Background effects */
+        .ambient-glow-1 {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .ambient-glow-2 {
+            position: absolute;
+            top: 40%;
+            right: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--card-border);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .badge-arch {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-img-container {
+            position: relative;
+            border-radius: 20px;
+            padding: 6px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.4), rgba(139, 92, 246, 0.4));
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(59, 130, 246, 0.25);
+            margin-bottom: 4rem;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-img-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            display: block;
+        }
+
+        /* 3-Layer Architecture Section */
+        .arch-section {
+            padding: 5rem 0;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .section-title span {
+            color: var(--primary);
+        }
+
+        .arch-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .arch-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            backdrop-filter: blur(16px);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .arch-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            padding: 1px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .arch-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.1);
+        }
+
+        .arch-card .icon-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .arch-card.layer-1 .icon-wrapper {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .arch-card.layer-2 .icon-wrapper {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--secondary);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .arch-card.layer-3 .icon-wrapper {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .arch-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .arch-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 5rem 0;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .feature-row {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .feature-row.reverse {
+            grid-template-columns: 0.9fr 1.1fr;
+        }
+
+        .feature-row.reverse .feature-info {
+            order: 2;
+        }
+
+        .feature-row.reverse .feature-visual {
+            order: 1;
+        }
+
+        .feature-info h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-info p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+
+        .feature-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .feature-visual {
+            border-radius: 16px;
+            padding: 4px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+            border: 1px solid var(--card-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .feature-visual:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            transform: scale(1.02);
+        }
+
+        .feature-visual img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Guide / Quickstart Section */
+        .quickstart-section {
+            padding: 5rem 0;
+            border-top: 1px solid var(--card-border);
+            background: radial-gradient(ellipse at bottom, rgba(59, 130, 246, 0.05), transparent 60%);
+        }
+
+        .code-box {
+            background: #040508;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            color: #38bdf8;
+            overflow-x: auto;
+            margin-bottom: 2rem;
+        }
+
+        .code-comment {
+            color: #6b7280;
+        }
+
+        .code-output {
+            color: #10b981;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .arch-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-row, .feature-row.reverse {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .feature-row.reverse .feature-info {
+                order: 1;
+            }
+            .feature-row.reverse .feature-visual {
+                order: 2;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-text">THEDRK CRM</div>
+            <div class="badge-arch">3-Layer Agentic Platform</div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>지능형 자동화의 중심<br><span>Pipeline CRM Dashboard</span></h1>
+            <p>
+                수신된 RFQ 이메일의 AI 파싱부터 실시간 영업 대시보드 관리, 자동 팔로우업 스케줄링, 그리고 VIP 뉴스레터 발송까지 결합된 고지능형 비즈니스 오토메이션 시스템입니다.
+            </p>
+            <div class="hero-img-container">
+                <img src="images/dashboard_main.jpg" alt="CRM Dashboard Main Visual">
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="arch-section">
+            <h2 class="section-title">안정성과 확장성을 극대화한 <span>3-Layer Architecture</span></h2>
+            <div class="arch-grid">
+                <!-- Layer 1 -->
+                <div class="arch-card layer-1">
+                    <div class="icon-wrapper">L1</div>
+                    <h3>Directive Layer</h3>
+                    <p>SOP 표준 운영 절차를 마크다운 형태의 평문으로 정의합니다. 비즈니스 로직과 요구 사항을 규정하여 AI 에이전트가 완벽하게 준수할 수 있도록 유도합니다.</p>
+                </div>
+                <!-- Layer 2 -->
+                <div class="arch-card layer-2">
+                    <div class="icon-wrapper">L2</div>
+                    <h3>Orchestration Layer</h3>
+                    <p>시스템에 배정된 AI Agent가 설정된 Directives를 해독하고 최적의 워크플로우를 실시간으로 결정 및 분기 처리하여 강력한 의사결정을 수행합니다.</p>
+                </div>
+                <!-- Layer 3 -->
+                <div class="arch-card layer-3">
+                    <div class="icon-wrapper">L3</div>
+                    <h3>Execution Layer</h3>
+                    <p>AI의 결정을 바탕으로 실제 작동하는 개별 Python 스크립트 모음입니다. API 연동, DB 트랜잭션, 메일 송수신 등 결정론적이고 견고한 작업 처리를 담당합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <h2 class="section-title">핵심 <span>기능별 특징</span></h2>
+
+            <!-- Feature 1 -->
+            <div class="feature-row">
+                <div class="feature-info">
+                    <div class="feature-tags">
+                        <span class="tag">Database Sheet</span>
+                        <span class="tag">SQLite CRM</span>
+                        <span class="tag">Lead List</span>
+                    </div>
+                    <h3>실시간 RFQ 연락처 시트</h3>
+                    <p>
+                        시스템에 자동 등록된 수많은 비즈니스 연락처와 RFQ 상세 정보를 한눈에 관리할 수 있는 데이터 시트입니다. 의뢰 회사, 담당자 연락처, 진행 상태(Status), 동의 여부(VIP Newsletter) 등 핵심 정보의 수정과 조회가 즉시 반영됩니다.
+                    </p>
+                </div>
+                <div class="feature-visual">
+                    <img src="images/rfq_parser.jpg" alt="Actual CRM Contacts Sheet Screenshot">
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-row reverse">
+                <div class="feature-info">
+                    <div class="feature-tags">
+                        <span class="tag">Interactive Charts</span>
+                        <span class="tag">Funnel Analysis</span>
+                        <span class="tag">Proposal Metrics</span>
+                    </div>
+                    <h3>영업 파이프라인 대시보드</h3>
+                    <p>
+                        비즈니스 동향을 실시간으로 직관화하는 메인 대시보드입니다. 전체 견적 요청(RFQ) 현황, 비딩(Bid) 제안 금액, 수주성공률(Win Rate) 및 최종 Win/Lost 데이터를 그래픽 대시보드를 통해 가시적으로 보여주어 의사결정을 가속화합니다.
+                    </p>
+                </div>
+                <div class="feature-visual">
+                    <img src="images/dashboard_main.jpg" alt="Actual CRM Dashboard Main Screenshot">
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-row">
+                <div class="feature-info">
+                    <div class="feature-tags">
+                        <span class="tag">Modern UI</span>
+                        <span class="tag">Responsive Web</span>
+                        <span class="tag">Sleek Visuals</span>
+                    </div>
+                    <h3>소개 웹페이지 및 시스템 구조</h3>
+                    <p>
+                        반응형 웹 기술을 적용하여 제작된 시스템 소개 랜딩 페이지입니다. PC와 모바일 기기 어느 환경에서나 유려하게 표시되며, 복잡한 인텔리전스 백엔드 아키텍처와 시작 가이드를 사용자 및 운영자에게 정밀하고 고급스럽게 전달합니다.
+                    </p>
+                </div>
+                <div class="feature-visual">
+                    <img src="images/followup_newsletter.jpg" alt="Actual CRM Intro Page Layout Screenshot">
+                </div>
+            </div>
+        </section>
+
+        <!-- Quickstart / Development Section -->
+        <section class="quickstart-section">
+            <h2 class="section-title">시스템 <span>시작하기</span></h2>
+            <div class="code-box">
+<span class="code-comment"># 1. 가상환경 및 의존성 패키지 설치</span>
+pip install -r requirements.txt
+
+<span class="code-comment"># 2. 로컬 환경 설정 (.env 복사 및 세부설정 수정)</span>
+copy .env.example .env
+
+<span class="code-comment"># 3. 로컬 대시보드 서버 가동</span>
+python execution/dashboard_app.py
+<span class="code-output"> * Running on http://127.0.0.1:5000</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 THEDRK. All rights reserved.</p>
+            <p>Designed for premium efficiency and agentic automation.</p>
+        </footer>
+    </div>
+</body>
+</html>

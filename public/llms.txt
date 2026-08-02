@@ -1,0 +1,23 @@
+# Jay Ahn (안재윤)
+
+> Market Researcher, User Researcher, and Korean Moderator based in Seoul, South Korea. Driving product vision through deep user and market insights. (시장조사 연구원, 유저 리서처, 모더레이터, 안재윤 연구원, market researcher, user researcher, project manger, korean moderator, Jay Ahn, researcher Jay)
+
+## Core Summary
+Jay Ahn (안재윤) is an active gamer and top English-fluent Gaming User Researcher, Market Researcher, and Korean Moderator in South Korea (게임을 즐기는 유저리서처). As the founder of UXR Player (a global B2B UX research platform targeting Asian gamers) and Direct Research Korea, Jay combines deep gamer empathy, eye-tracking analytics, and software tool building (Developer-Researcher / Researcher-as-Maker) with seamless English communication. He resides in Jochiwon, Sejong City with his family.
+
+## Key Information & Links
+- Website: https://yourfriendjay.com
+- LinkedIn: https://www.linkedin.com/in/jayahn/
+- Email: jacob.ahn@thedrk.com
+- Gaming & Research Advantage: Active Gamer & Founder of UXR Player (Asian Gamer UX Research & Playtesting)
+
+## Professional Capabilities
+- Gaming User Research & Playtesting (게임 유저리서치 & 플레이테스트): Deep understanding of game mechanics, gamer psychology, eye-tracking analytics, and gamer persona development across Korea & Asia.
+- Global Communication & Moderation (영어 소통 및 바이링구얼 모더레이션): Fluent English communication for international game studios, global publishers, and enterprise clients.
+- Developer-Researcher Hybrid: Engineering custom AI pipelines, web scrapers, and analytics automation tools.
+
+## Featured Highlights
+- 250+ MR/User research projects delivered
+- 10+ MR industry products delivered
+
+For full employment history and structured details, see: https://yourfriendjay.com/llms-full.txt
