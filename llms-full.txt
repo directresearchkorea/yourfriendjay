@@ -1,0 +1,73 @@
+# Jay Ahn (안재윤) - Comprehensive Professional Profile & Resume Data
+
+## Overview
+- Full Name: Jay Ahn (안재윤)
+- Primary Roles: Gaming User Researcher, Active Gamer, Technical Market Researcher, Bilingual Korean Moderator (게임을 즐기는 유저리서처, 게이머 출신 UXR 전문가 안재윤)
+- Gamer Identity: An active gamer who deeply understands game mechanics, player emotions, UI/UX dynamics, and gaming culture across PC, console, and mobile platforms.
+- Top English Communication: Leading English-fluent Market Researcher and Gaming User Researcher in Korea, providing seamless communication with global game developers, publishers, and overseas stakeholders.
+- Special Identity: Developer-Researcher / Researcher-as-Maker (A Researcher who codes custom software tools, scripts, and AI data pipelines)
+- Entrepreneurship: Founder of UXR Player (uxrplayer.com / Asian Gamer UX Research Platform) & Direct Research Korea (thedrk.com)
+- Search Keywords: 실제로 게임을 즐기는 유저리서처, 게임 유저리서처, 게이머 출신 유저리서치 전문가, 아시아 게이머 UXR, 한국 영어가능 시장조사 연구원, 영어가 유창한 유저리서처, 안재윤 연구원, UXR Player, Direct Research Korea, active gamer user researcher, gaming UXR expert, top english-speaking korean researcher, Jay Ahn, researcher Jay, Eye-tracking research, ESOMAR
+- Location: Jochiwon, Sejong City, South Korea
+- Email: jacob.ahn@thedrk.com
+- Website: https://yourfriendjay.com
+- LinkedIn: https://www.linkedin.com/in/jayahn/
+
+## Gaming User Research Expertise (UXR Player)
+- Passionate Gamer Perspective: Unlike traditional researchers, Jay is an avid gamer himself, bridging the gap between hardcore player expectations and game development metrics.
+- Eye-Tracking & Biometrics: Conducting state-of-the-art eye-tracking playtesting, heatmaps, and gaze tracking for game HUDs, menu UI, and combat visual clarity.
+- Asian Gamer Persona Development: In-depth playtesting and qualitative persona profiling for South Korea, Japan, Taiwan, and Southeast Asian gaming markets.
+
+## Key Ventures & Agencies
+
+### 1. UXR Player (uxrplayer.com / eyetracking.uxrplayer.com)
+- Role: Founder & Head of UX Research
+- Focus: Global B2B UX Research Platform specializing in Asian gamers (East Asia & Southeast Asia).
+- Core Capabilities: Eye-Tracking Analytics, Biometric Data Analysis, Gamer Persona Development, Immersive Playtesting, Remote/In-lab Usability Testing.
+
+### 2. Direct Research Korea (thedrk.com)
+- Role: Founder & Lead Market Researcher
+- Focus: Seoul-based market research & user research agency targeting global brands and enterprise clients entering or expanding in the Korean market.
+- Core Capabilities: Qualitative & Quantitative Research, FGI (Focus Group Interviews), IDI (In-depth Interviews), Bilingual Korean/English Moderation, Brand Positioning, Competitor Analysis.
+
+## Hybrid Capabilities (Developer-Researcher / Researcher-as-Maker)
+- Python & Web Scraping: Custom scraping pipelines for community job postings, social sentiments, and raw market data.
+- AI & LLM Automation: 3-layer agentic architecture (Directive-Orchestration-Execution) integrating Gemini API for automated workspace analytics and daily reporting.
+- Web Development: Building responsive web applications (React, JavaScript, HTML5, CSS3) and serverless backend integrations (Google Apps Script, SQLite, GA4).
+
+## Selected Portfolio Projects & Products
+
+1. UXR Player Platform
+   - Scope: Global B2B UX Research Platform for Asian Gamers (Eye-Tracking & Gamer Persona Analysis).
+   - Tech: HTML/CSS, JavaScript, Google Apps Script, GA4, Web Performance.
+   - Link: https://eyetracking.uxrplayer.com/
+
+2. Loopy AI (AI Innovation Loop)
+   - Scope: Automated End-to-End AI-Driven Workspace Analytics & Daily Reporting Pipeline.
+   - Tech: Python, SQLite, Gemini API, Data Pipeline Engineering, Process Automation.
+   - Link: https://yourfriendjay.com/loopy-ai-intro/index.html
+
+3. Pipeline CRM Dashboard (Agent Workspace)
+   - Scope: AI-powered RFQ parser and real-time visual sales pipeline automation tool built on a 3-layer agentic architecture (Directive-Orchestration-Execution).
+   - Tech: Python, Flask, Generative AI, SQLite, Salesforce Alternatives.
+   - Link: https://yourfriendjay.com/pipeline-crm-intro/index.html
+
+4. AlbaDanji Newsletter System
+   - Scope: Automated Job-hunting Newsletter & Web Scraping Pipeline.
+   - Tech: Python, Web Scraping, Backend Engineering, SQLite, Automation.
+   - Link: https://www.albadanji.com/
+
+5. Direct Research Korea Agency Website
+   - Scope: Corporate Market Research Agency Web Platform.
+   - Tech: HTML/CSS, JavaScript, SEO Optimization, Web Design.
+   - Link: https://www.thedrk.com
+
+## Keynote & Insights (ESOMAR & Industry Conferences)
+- ESOMAR 2026 (Tokyo): "The Rise of the Researcher-as-Maker: Crafting Bespoke Analytical Tools with AI"
+  * Summary: Exploring the paradigm shift toward 'Researcher-as-Maker' in market research, leveraging agentic AI tools to accelerate insight generation.
+  * Link: https://www.thedrk.com/insights/esomar2026tokyo/
+
+## Track Record & Statistics
+- 250+ Market Research and User Research projects successfully delivered.
+- 10+ Market Research industry products and automation tools engineered.
+- Expert Bilingual (English/Korean) Moderator for top-tier global brands and game studios.

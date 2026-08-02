@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loopy AI - Intelligent Workspace Automation Loop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="bg-glow glow-top-right"></div>
+  <div class="bg-glow glow-bottom-left"></div>
+
+  <!-- Hero Header -->
+  <header>
+    <div class="badge">
+      <span>✨ Self-Improving AI Analytics Loop</span>
+    </div>
+    <h1>Intelligently Connecting Workflow<br><span>Loopy AI Architecture</span></h1>
+    <p class="hero-subtitle">
+      Aggregates and normalizes fragmented unstructured workspace data from Google Calendar, Gmail, and desktop messengers in real-time to deliver intelligent daily reporting and structured business data assets.
+    </p>
+
+    <!-- Key Metrics / Stats -->
+    <div class="stats-container">
+      <div class="stat-card glass-card">
+        <div class="stat-val">100%</div>
+        <div class="stat-lbl">Data Integration Automation</div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-val">0 min</div>
+        <div class="stat-lbl">Manual Report Writing</div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-val">SQLite</div>
+        <div class="stat-lbl">Relational DB Assetization</div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-val">Gemini</div>
+        <div class="stat-lbl">AI Structured Parsing</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive System Schema Section -->
+  <section id="schema">
+    <h2 class="section-title">System Schema</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Click each node in the schema below to view detailed data flow and functionality for that pipeline step.
+    </p>
+
+    <div class="schema-container">
+      <!-- Left: Interactive SVG Schema Diagram -->
+      <div class="schema-visual">
+        <svg class="schema-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Flow Line Backings -->
+          <path id="line1" d="M100 100 H300" stroke="#e5e7eb" stroke-width="2"/>
+          <path id="line2" d="M300 100 V300" stroke="#e5e7eb" stroke-width="2"/>
+          <path id="line3" d="M300 300 H100" stroke="#e5e7eb" stroke-width="2"/>
+          <path id="line4" d="M100 300 V100" stroke="#e5e7eb" stroke-width="2"/>
+
+          <!-- Animated Flowing Dash Lines -->
+          <path id="flow1" d="M100 100 H300" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" stroke-linecap="round" class="flow-line"/>
+          <path id="flow2" d="M300 100 V300" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" stroke-linecap="round" class="flow-line"/>
+          <path id="flow3" d="M300 300 H100" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" stroke-linecap="round" class="flow-line"/>
+          <path id="flow4" d="M100 300 V100" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" stroke-linecap="round" class="flow-line"/>
+
+          <!-- Center Logo Concept -->
+          <circle cx="200" cy="200" r="40" fill="url(#center-glow)" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1"/>
+          <text x="200" y="205" fill="#111827" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">LOOPY</text>
+
+          <g id="node-fetcher" class="node active" onclick="selectNode('fetcher')">
+            <rect x="50" y="60" width="100" height="80" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+            <text x="100" y="95" fill="#111827" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">1. Data Fetcher</text>
+            <text x="100" y="115" fill="#4b5563" font-family="Outfit" font-size="10" text-anchor="middle">Email, Cal, Chat</text>
+          </g>
+
+          <!-- Node 2: Analyzer -->
+          <g id="node-analyzer" class="node" onclick="selectNode('analyzer')">
+            <rect x="250" y="60" width="100" height="80" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+            <text x="300" y="95" fill="#111827" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">2. AI Analyzer</text>
+            <text x="300" y="115" fill="#4b5563" font-family="Outfit" font-size="10" text-anchor="middle">Gemini LLM Parser</text>
+          </g>
+
+          <!-- Node 3: Database -->
+          <g id="node-db" class="node" onclick="selectNode('db')">
+            <rect x="250" y="260" width="100" height="80" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="1.5"/>
+            <text x="300" y="295" fill="#111827" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">3. DB Engine</text>
+            <text x="300" y="315" fill="#4b5563" font-family="Outfit" font-size="10" text-anchor="middle">SQLite DB Save</text>
+          </g>
+
+          <!-- Node 4: Email Sender -->
+          <g id="node-email" class="node" onclick="selectNode('email')">
+            <rect x="50" y="260" width="100" height="80" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+            <text x="100" y="295" fill="#111827" font-family="Outfit" font-size="12" font-weight="bold" text-anchor="middle">4. Report Sender</text>
+            <text x="100" y="315" fill="#4b5563" font-family="Outfit" font-size="10" text-anchor="middle">SMTP Dispatcher</text>
+          </g>
+
+          <!-- Definitions -->
+          <defs>
+            <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(59, 130, 246, 0.4)"/>
+              <stop offset="100%" stop-color="rgba(255, 255, 255, 0)"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Right: Detailed Node Info Panel -->
+      <div class="schema-detail-panel glass-card" id="detail-panel">
+        <span class="step-indicator" id="detail-step">STEP 1</span>
+        <h3 id="detail-title">Data Fetching Pipeline (Data Fetcher)</h3>
+        <p id="detail-desc">
+          Parses daily schedules via Google Calendar API, fetches emails via IMAP/SMTP protocols, and captures messenger chat logs as real-time unstructured text using Windows GUI automation triggers.
+        </p>
+
+        <div class="tech-tags" id="detail-tags">
+          <span class="tech-tag">IMAP/SMTP</span>
+          <span class="tech-tag">Google API</span>
+          <span class="tech-tag">PyAutoGUI/Win32API</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Features Section -->
+  <section id="features">
+    <h2 class="section-title">Key Modules & Technical Highlights</h2>
+
+    <div class="features-grid">
+      <!-- Fetcher Card -->
+      <div class="glass-card">
+        <div class="feature-header">
+          <div class="feature-icon-wrapper">🔌</div>
+          <h3>Multi-Channel Data Ingestion (Fetcher)</h3>
+        </div>
+        <p class="feature-desc">
+          Periodically monitors email inboxes, Google Calendar events, and local messenger clients to extract raw data safely into normalized text formats.
+        </p>
+      </div>
+
+      <!-- AI Analyzer Card -->
+      <div class="glass-card">
+        <div class="feature-header">
+          <div class="feature-icon-wrapper">🧠</div>
+          <h3>AI-Driven Workspace Analysis (Analyzer)</h3>
+        </div>
+        <p class="feature-desc">
+          Leverages Gemini AI's natural language understanding to contextualize multi-dimensional daily workspace data and generate readable summaries.
+        </p>
+      </div>
+
+      <!-- DB Engine Card -->
+      <div class="glass-card">
+        <div class="feature-header">
+          <div class="feature-icon-wrapper">💾</div>
+          <h3>Structured DB Persistence (DB Engine)</h3>
+        </div>
+        <p class="feature-desc">
+          Parses structured JSON blocks from AI analysis output and stores them into SQLite for downstream dashboard visualization and query access.
+        </p>
+      </div>
+
+      <!-- Sender Card -->
+      <div class="glass-card">
+        <div class="feature-header">
+          <div class="feature-icon-wrapper">✉️</div>
+          <h3>Automated Daily Email Dispatch (Sender)</h3>
+        </div>
+        <p class="feature-desc">
+          Wraps formatted Markdown report files into HTML email templates upon analysis completion and immediately dispatches via SMTP.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Jay Ahn. All rights reserved.</p>
+  </footer>
+
+  <!-- Interactivity Script -->
+  <script>
+    const nodeData = {
+      fetcher: {
+        step: 'STEP 1',
+        title: 'Data Fetching Pipeline (Data Fetcher)',
+        desc: 'Parses daily schedules via Google Calendar API, fetches emails via IMAP/SMTP protocols, and captures messenger chat logs as real-time unstructured text using Windows GUI automation triggers.',
+        tags: ['IMAP/SMTP', 'Google API', 'PyAutoGUI/Win32API'],
+        flowIndex: 1
+      },
+      analyzer: {
+        step: 'STEP 2',
+        title: 'AI Contextual Analysis Engine (AI Analyzer)',
+        desc: 'Aggregates collected text logs across timeline and priority axes. Leverages Gemini API to extract business insights, work summaries, issue tracking, and action item assignments.',
+        tags: ['Gemini Pro API', 'Prompt Engineering', 'Structured JSON Output'],
+        flowIndex: 2
+      },
+      db: {
+        step: 'STEP 3',
+        title: 'Structured Database Engine (DB Engine)',
+        desc: 'Safely extracts structured JSON workspace data embedded in generated reports, migrating and indexing it into an SQLite relational database schema.',
+        tags: ['SQLite', 'Database Indexing', 'JSON Schema Parsing'],
+        flowIndex: 3
+      },
+      email: {
+        step: 'STEP 4',
+        title: 'Report Distribution & Loop Completion (Report Sender)',
+        desc: 'Encodes polished Markdown daily work reports into HTML/MIME email format, dispatches to recipients every morning via SMTP, and archives local backups.',
+        tags: ['SMTP Protocol', 'MIME Multipart', 'Markdown-to-HTML'],
+        flowIndex: 4
+      }
+    };
+
+    function selectNode(nodeId) {
+      // Deactivate all nodes and flows
+      document.querySelectorAll('.node').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.flow-line').forEach(el => el.classList.remove('flow-line-active'));
+
+      // Activate clicked node
+      const clickedNode = document.getElementById(`node-${nodeId}`);
+      if (clickedNode) clickedNode.classList.add('active');
+
+      // Update Detail Panel Content
+      const data = nodeData[nodeId];
+      if (data) {
+        document.getElementById('detail-step').innerText = data.step;
+        document.getElementById('detail-title').innerText = data.title;
+        document.getElementById('detail-desc').innerText = data.desc;
+
+        // Update tag list
+        const tagsContainer = document.getElementById('detail-tags');
+        tagsContainer.innerHTML = '';
+        data.tags.forEach(tag => {
+          const tagSpan = document.createElement('span');
+          tagSpan.className = 'tech-tag';
+          tagSpan.innerText = tag;
+          tagsContainer.appendChild(tagSpan);
+        });
+
+        // Activate corresponding flows
+        const flowLine = document.getElementById(`flow${data.flowIndex}`);
+        if (flowLine) flowLine.classList.add('flow-line-active');
+      }
+    }
+  </script>
+</body>
+</html>
