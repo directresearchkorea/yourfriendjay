@@ -139,8 +139,10 @@ export default function Navbar({ name, scheduleConfig }) {
       // - 23:00 (11 PM) ~ 08:00 (8 AM): Sleeping
       // - Weekends / Public Holidays (non-sleeping): Off Duty
       // - Weekdays 08:00 ~ 10:00: Getting Ready
-      // - Weekdays 10:00 ~ 18:30: Working
-      // - Otherwise: Available
+      // - Weekdays 13:00 ~ 14:00 (1 PM ~ 2 PM): Lunch Break
+      // - Weekdays 18:00 ~ 20:00 (6 PM ~ 8 PM): Dinner Break
+      // - Weekdays 10:00 ~ 13:00 & 14:00 ~ 18:00: Working
+      // - Otherwise (20:00 ~ 23:00): Available
       const currentDecimalHour = hours + minutes / 60;
       const isSleeping = currentDecimalHour >= 23 || currentDecimalHour < 8;
 
@@ -156,9 +158,16 @@ export default function Navbar({ name, scheduleConfig }) {
       }
 
       const isGettingReady = currentDecimalHour >= 8 && currentDecimalHour < 10;
+      const isLunchTime = currentDecimalHour >= 13 && currentDecimalHour < 14;
+      const isDinnerTime = currentDecimalHour >= 18 && currentDecimalHour < 20;
+
       if (isGettingReady) {
         setStatus({ label: 'Getting Ready', color: 'orange' });
-      } else if (currentDecimalHour >= 10 && currentDecimalHour < 18.5) {
+      } else if (isLunchTime) {
+        setStatus({ label: 'Lunch Break', color: 'orange' });
+      } else if (isDinnerTime) {
+        setStatus({ label: 'Dinner Break', color: 'orange' });
+      } else if ((currentDecimalHour >= 10 && currentDecimalHour < 13) || (currentDecimalHour >= 14 && currentDecimalHour < 18)) {
         setStatus({ label: 'Working', color: 'green' });
       } else {
         setStatus({ label: 'Available', color: 'green' });
