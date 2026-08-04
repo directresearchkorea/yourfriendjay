@@ -28,7 +28,7 @@ const MagneticButton = ({ children, className = "", onClick, href }) => {
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       className={`inline-block ${className}`}
     >
-      <Tag href={href} onClick={onClick} className="block w-full h-full cursor-none" style={{ cursor: 'none' }}>
+      <Tag href={href} onClick={onClick} className="block w-full h-full cursor-pointer" style={{ cursor: 'pointer' }}>
         {children}
       </Tag>
     </motion.div>
