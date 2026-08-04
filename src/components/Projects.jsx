@@ -13,9 +13,28 @@ export default function Projects({ projects }) {
         </div>
 
         <div className="projects-grid">
-          {projects.map((p) => (
-            <div key={p.id} className="project-card">
-              <div style={{ fontSize: '0.85rem', color: 'var(--accent-primary)', fontWeight: 600, marginBottom: '8px' }}>
+          {projects.map((p) => {
+            const handleCardClick = (e) => {
+              if (e.target.closest('a') || e.target.closest('button')) {
+                return;
+              }
+              if (p.link) {
+                if (p.link.startsWith('http')) {
+                  window.open(p.link, '_blank', 'noopener,noreferrer');
+                } else {
+                  window.location.href = p.link;
+                }
+              }
+            };
+
+            return (
+              <div 
+                key={p.id} 
+                className="project-card"
+                onClick={handleCardClick}
+                style={{ cursor: p.link ? 'pointer' : 'default' }}
+              >
+                <div style={{ fontSize: '0.85rem', color: 'var(--accent-primary)', fontWeight: 600, marginBottom: '8px' }}>
                 {p.tagline}
               </div>
               <h3 style={{ fontSize: '1.35rem', marginBottom: '12px' }}>{p.title}</h3>
@@ -42,7 +61,8 @@ export default function Projects({ projects }) {
                 )}
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
       </div>
     </section>

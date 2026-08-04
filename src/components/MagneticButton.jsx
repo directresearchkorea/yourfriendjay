@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const MagneticButton = ({ children, className = "", onClick, href }) => {
+const MagneticButton = ({ children, className = "", onClick, href, style }) => {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -27,6 +27,7 @@ const MagneticButton = ({ children, className = "", onClick, href }) => {
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       className={`inline-block ${className}`}
+      style={style}
     >
       <Tag href={href} onClick={onClick} className="block w-full h-full cursor-pointer" style={{ cursor: 'pointer' }}>
         {children}
