@@ -8,7 +8,6 @@ const profileData = {
     location: "Seoul, South Korea",
     email: "jay@yourfriendjay.com",
     linkedin: "https://www.linkedin.com/in/jayahn/",
-    github: "https://github.com",
     twitter: "https://x.com",
     website: "https://yourfriendjay.com",
     availability: "Open for Opportunities & Advisory"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Linkedin, Github, Mail } from 'lucide-react';
+import { ArrowRight, Linkedin, Mail } from 'lucide-react';
 import RevealText from './RevealText';
 import MagneticButton from './MagneticButton';
 
@@ -41,11 +41,6 @@ export default function Hero({ personal, highlights }) {
               {personal.linkedin && (
                 <a href={personal.linkedin} target="_blank" rel="noreferrer" className="social-btn" title="LinkedIn">
                   <Linkedin size={18} />
-                </a>
-              )}
-              {personal.github && (
-                <a href={personal.github} target="_blank" rel="noreferrer" className="social-btn" title="GitHub">
-                  <Github size={18} />
                 </a>
               )}
               {personal.email && (

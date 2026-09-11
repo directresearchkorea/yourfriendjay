@@ -77,7 +77,6 @@ function renderProfile() {
     if (socialContainer) {
       socialContainer.innerHTML = `
         ${personal.linkedin ? `<a href="${personal.linkedin}" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>` : ''}
-        ${personal.github ? `<a href="${personal.github}" target="_blank" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>` : ''}
         ${personal.email ? `<a href="mailto:${personal.email}" class="social-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>` : ''}
       `;
     }
