@@ -2,7 +2,7 @@ const profileData = {
   personal: {
     name: "Jay Ahn",
     koreanName: "안재홍 / Jay",
-    title: "Senior Product & Engineering Leader",
+    title: "Human Researcher and Engineer",
     tagline: "Connecting technology, strategic vision, and human-centric design.",
     bio: "Passionate leader and developer dedicated to building impactful digital experiences, scalable architecture, and empowering high-performing teams. Focused on driving growth through modern technology and strategic execution.",
     location: "Seoul, South Korea",

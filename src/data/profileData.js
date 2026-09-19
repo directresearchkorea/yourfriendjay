@@ -2,7 +2,7 @@ export const profileData = {
   personal: {
     name: "Jay Ahn",
     koreanName: "안재윤",
-    title: "Senior Researcher & Product Engineer",
+    title: "Human Researcher and Engineer",
     tagline: "Driven by curiosity and a genuine desire to understand people,\nI strive to make a meaningful impact through research.\n\nI lead Direct Research Korea, a Korean market & user research agency,\nand UXR Player, a user research platform targeting Asia.\n\nI live in Jochiwon, Sejong City with my loving wife and three teenage children.",
     bio: "Passionate product leader and software architect dedicated to scaling systems, driving product growth, and mentoring engineering teams. Focused on clean architecture and high-impact digital solutions.",
     location: "Jochiwon, Sejong City, South Korea",
