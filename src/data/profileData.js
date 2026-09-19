@@ -4,7 +4,7 @@ export const profileData = {
     koreanName: "안재윤",
     title: "Human Researcher and Engineer",
     tagline: "Driven by curiosity and a genuine desire to understand people,\nI strive to make a meaningful impact through research.",
-    focusStatement: "Currently, I am working on projects that transform clients' dead data into interactive live data.",
+    focusStatement: "Currently, I am working on projects that transform clients' dead data into interactive live data with AI.",
     bio: "Passionate product leader and software architect dedicated to scaling systems, driving product growth, and mentoring engineering teams. Focused on clean architecture and high-impact digital solutions.",
     location: "Jochiwon, Sejong City, South Korea",
     email: "jacob.ahn@thedrk.com",
