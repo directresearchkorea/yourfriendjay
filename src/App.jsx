@@ -38,6 +38,7 @@ export default function App() {
         
         <Projects 
           projects={profileData.projects} 
+          focusStatement={profileData.personal.focusStatement}
         />
         
         <Cases 

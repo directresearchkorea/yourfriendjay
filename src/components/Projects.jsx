@@ -3,7 +3,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import RevealText from './RevealText';
 import MagneticButton from './MagneticButton';
 
-export default function Projects({ projects }) {
+export default function Projects({ projects, focusStatement }) {
   return (
     <section className="section" id="projects">
       <div className="container">
@@ -11,6 +11,30 @@ export default function Projects({ projects }) {
           <p className="section-subtitle"><RevealText>Craft & Engineering</RevealText></p>
           <h2 className="section-title"><RevealText delayOffset={0.2}>Projects</RevealText></h2>
         </div>
+
+        {focusStatement && (
+          <div 
+            className="focus-statement-box" 
+            style={{ 
+              margin: '0 auto 3rem', 
+              padding: '16px 24px', 
+              maxWidth: '640px', 
+              borderRadius: '16px', 
+              background: 'var(--bg-secondary)', 
+              border: '1px solid var(--border-hover)', 
+              boxShadow: 'var(--card-shadow)',
+              textAlign: 'center'
+            }}
+          >
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.05em', color: 'var(--accent-primary)', marginBottom: '6px' }}>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10b981', display: 'inline-block', boxShadow: '0 0 8px #10b981' }} />
+              CURRENT FOCUS
+            </div>
+            <p style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-primary)', lineHeight: 1.5, margin: 0 }}>
+              Currently, I am working on projects that transform clients' <span style={{ opacity: 0.65, textDecoration: 'line-through' }}>dead data</span> into <span className="gradient-text" style={{ fontWeight: 800 }}>interactive live data</span>.
+            </p>
+          </div>
+        )}
 
         <div className="projects-grid">
           {projects.map((p) => {
