@@ -3,7 +3,7 @@ export const profileData = {
     name: "Jay Ahn",
     koreanName: "안재윤",
     title: "Human Researcher and Engineer",
-    tagline: "Driven by curiosity and a genuine desire to understand people,\nI strive to make a meaningful impact through research—selected for consecutive ESOMAR Insight Papers and invited as a speaker in 2024 & 2026.",
+    tagline: "Driven by curiosity and a genuine desire to understand people,\nI strive to make a meaningful impact through research.",
     focusStatement: "Currently, I am working on projects that transform clients' dead data into interactive live data.",
     bio: "Passionate product leader and software architect dedicated to scaling systems, driving product growth, and mentoring engineering teams. Focused on clean architecture and high-impact digital solutions.",
     location: "Jochiwon, Sejong City, South Korea",
@@ -19,9 +19,9 @@ export const profileData = {
     available: { label: "Available", color: "green" }                       // Other hours
   },
   highlights: [
+    "2024, 2026 ESOMAR Insight Paper selected & Speaker invited",
     "250+ MR/User research projects delivered",
-    "10+ MR industry products delivered",
-    "Human Researcher"
+    "10+ MR industry products delivered"
   ],
   projects: [
     {
