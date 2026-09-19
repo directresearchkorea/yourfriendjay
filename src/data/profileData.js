@@ -24,6 +24,16 @@ export const profileData = {
   ],
   projects: [
     {
+      id: "proj-interkick",
+      title: "InterKick",
+      tagline: "VOC Intelligence & Live AI Persona Chat Platform",
+      description: "A comprehensive customer insights platform designed for global consumer research. Enables real-time sentiment tracking, churn risk detection, and interactive customer interview simulations powered by live AI personas.",
+      tags: ["AI Persona", "VOC Intelligence", "Sentiment Analysis", "Generative AI", "UX Research"],
+      link: "https://www.interkick.net/",
+      linkLabel: "Visit Service",
+      github: ""
+    },
+    {
       id: "proj-loopy",
       title: "Loopy AI (AI Innovacation Loop)",
       tagline: "Automated End-to-End AI-Driven Workspace Analytics & Daily Reporting Pipeline",
