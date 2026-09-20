@@ -20,8 +20,8 @@ export default function HitJay({ personal }) {
             Get In Touch
           </div>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '16px', letterSpacing: '-0.02em' }}>Hit Jay</h2>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '36px', fontSize: '1.1rem', maxWidth: '560px', margin: '0 auto 36px' }}>
-            Whether you're looking for actionable market and user research, navigating a technical challenge, or seeking product and leadership advisory—let's connect and build something extraordinary together.
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '36px', fontSize: '1.1rem', maxWidth: '620px', margin: '0 auto 36px', lineHeight: 1.6 }}>
+            Combining deep human research expertise with hands-on product engineering, I transform raw market and user research data into interactive, intelligent live data. Let's connect and bring your insights to life.
           </p>
 
           <div className="hit-jay-actions">
