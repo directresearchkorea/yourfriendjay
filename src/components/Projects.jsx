@@ -31,7 +31,7 @@ export default function Projects({ projects, focusStatement }) {
               CURRENT FOCUS
             </div>
             <p style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-primary)', lineHeight: 1.5, margin: 0 }}>
-              Currently, I am working on projects that transform clients' <span style={{ opacity: 0.65, textDecoration: 'line-through' }}>dead data</span> into <span className="gradient-text" style={{ fontWeight: 800 }}>interactive live data</span> with AI.
+              Currently, I am working on projects that transform clients' dead data into <span className="gradient-text" style={{ fontWeight: 800 }}>interactive live data</span> with AI.
             </p>
           </div>
         )}
